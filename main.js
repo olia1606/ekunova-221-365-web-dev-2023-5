@@ -41,3 +41,28 @@ function displaySearchResults(data) {
     resultsContainer.appendChild(preElement); // Добавляем элемент <pre> в контейнер для результатов
   });
 }
+
+function displaySearchResults(data) {
+  resultsContainer.innerHTML = '';
+
+  const records = data.records;
+
+  if (!records || records.length === 0) {
+    resultsContainer.textContent = 'No results found';
+    return;
+  }
+
+  records.forEach((item) => {
+    const recordText = JSON.stringify(item.text, null, 2);
+    const preElement = document.createElement('pre');
+    preElement.classList.add('element');
+
+    preElement.textContent = recordText;
+
+    preElement.addEventListener('click', function () {
+      searchInput.value = item.text; // Заполняем input текстом при клике на результат
+    });
+
+    resultsContainer.appendChild(preElement);
+  });
+}
