@@ -1,84 +1,105 @@
-/* styles.css */
-
+/* Общие стили */
 body {
-    font-family: Arial, sans-serif;
-  }
-  
-  h1 {
-    text-align: center;
-  }
-  
-  form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  input[type="text"] {
-    padding: 8px;
-    margin-right: 10px;
-    width: 200px;
-  }
-  
-  button {
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  #results-container {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  /* Additional styles for dropdown list */
-  /* Customize according to your preferences */
-  datalist {
-    position: absolute;
-    z-index: 1;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    max-height: 150px;
-    overflow-y: auto;
-  }
-  
-  option {
-    padding: 4px;
-    cursor: pointer;
-  }
-  
-  option:hover {
-    background-color: #f0f0f0;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
 
-  /* style.css */
+.container {
+  width: 80%;
+  margin: auto;
+}
 
-/* Добавьте стили для блока результатов */
-#search-results {
-    margin-top: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-    overflow-y: auto;
-    width: 40%;
-    margin: 0 auto;
-  }
-  
-  #search-results pre {
-    background-color: #f5f5f5;
-    border-radius: 5px;
-    padding: 8px;
-    margin-bottom: 10px;
-    font-family: 'Arial', sans-serif;
-    line-height: 1.4;
-    font-size: 14px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .element {
-    cursor: pointer;
-  }
+/* Стили для шапки */
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 24px;
+}
+
+/* Стили для основного контента */
+.search-form {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.search-field {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  flex: 1;
+}
+
+.search-btn {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.autocomplete-items {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 1;
+  top: 37px;
+  width: 75.2%;
+}
+
+.per-page-btn {
+  margin-right: 10px;
+}
+
+/* Стили для списка фактов */
+.facts-list-item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Стили для пагинации */
+.pagination-info {
+  margin-bottom: 20px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  padding: 8px 16px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+}
+
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
